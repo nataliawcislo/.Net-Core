@@ -1,19 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Shop.Product
 {
-    public class Product
+    public class Product 
     {
         public string Name { get; set; }
         public float Price { get; set; }
+        public DateTime Description { get => Description; set => Description = value; }
         public string DataAdd { get; set; }
-        public DateTime Description { get => Description; set => Description = value; 
-
-        public Product(string name, float price, string dataAdd, DateTime description)
+       
+        public Product(string name, float price,  DateTime description, string dataAdd)
         {
-            this.Name = name;
-            this.Price = price;
-            this.DataAdd = dataAdd;
-            this.Description = description;
+            Name = name;
+            Price = price;
+            Description = description;
+            DataAdd = dataAdd;
         }
+
     }
 }
